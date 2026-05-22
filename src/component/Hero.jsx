@@ -116,7 +116,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <div style={{ ...styles.root, height: isMobile ? 420 : styles.root.height }}>
+        <div style={{ ...styles.root, height: isMobile ? '630px' : styles.root.height }}>
             {/* Track */}
             <div style={styles.track}>
                 {slides.map((slide, i) => {
@@ -133,7 +133,7 @@ export default function Hero() {
                         ...(isImage
                             ? {
                                 backgroundImage,
-                                backgroundSize: isMobile ? 'contain' : 'cover',
+                                backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundColor: isMobile ? '#000' : 'transparent',
