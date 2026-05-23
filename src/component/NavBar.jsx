@@ -2,50 +2,26 @@ import './NavBar.css'
 const NavBar = () => {
     return (
         <>
-            <div className="max-lg:collapse bg-base-200 lg:mb-48 shadow-sm w-full rounded-md">
-                <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
-                <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
-                <div className="collapse-title navbar">
-                    <div className="navbar-start">
-                        <label htmlFor="navbar-1-toggle" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
-                        <button className="btn btn-ghost text-xl">daisyUI</button>
-                    </div>
-                    <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
-                            <li><button>Item 1</button></li>
-                            <li>
-                                <details>
-                                    <summary>Parent</summary>
-                                    <ul className="p-2 bg-base-100 w-40 z-1">
-                                        <li><button>Submenu 1</button></li>
-                                        <li><button>Submenu 2</button></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li><button>Item 3</button></li>
-                        </ul>
-                    </div>
-                    <div className="navbar-end">
-                        <input type="text" placeholder="Search" className="input input-bordered w-64 lg:w-auto" />
-                    </div>
-                </div>
-
-                <div className="collapse-content lg:hidden z-1">
-                    <ul className="menu">
-                        <li><button>Item 1</button></li>
-                        <li>
-                            <button>Parent</button>
-                            <ul>
-                                <li><button>Submenu 1</button></li>
-                                <li><button>Submenu 2</button></li>
-                            </ul>
-                        </li>
-                        <li><button>Item 3</button></li>
+            <nav className="navbar">
+                <div className='navbar-list'>
+                    <ul>
+                        <li><img src="src/assets/mobile/mtn-logo.png" height="60" width="80" alt="" /></li>
+                        <li>About Us</li>
+                        <li>Sustainability</li>
+                        <li>Investors</li>
+                        <li>News</li>
+                        <li>People & Culture</li>
+                        <li>Legal</li>
                     </ul>
                 </div>
-            </div>
+                <div className='navbar-search'>
+                    <img src="data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 18C15.1421 18 18.5 14.6421 18.5 10.5C18.5 6.35786 15.1421 3 11 3C6.85786 3 3.5 6.35786 3.5 10.5C3.5 14.6421 6.85786 18 11 18Z' stroke='%23202020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21.4998 21L16.2998 15.8' stroke='%23202020' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="" />
+                    <div className='navbar-searchImg'>
+                        <img src="https://www.mtn.com/wp-content/themes/mtn-refresh/public/img/svgs/world.svg" alt="" />
+                        <img src="https://www.mtn.com/wp-content/themes/mtn-refresh/public/img/svgs/chevron.svg" alt="" />
+                    </div>
+                </div>
+            </nav>
         </>
     )
 }
