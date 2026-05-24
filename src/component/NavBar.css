@@ -11,6 +11,11 @@
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+
+}
+
+.hamburger {
+    display: none;
 }
 
 .navbar ul {
@@ -113,8 +118,35 @@
         gap: 0.5rem;
     }
 }
+
 @media screen and (max-width: 768px) {
-    navbar ul {
+    .navbar ul li {
+        display: none;
+    }
+
+    .navbar-search img {
+        display: none;
+    }
+
+    .navbar-searchImg {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .search-container {
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 98%;
+        margin: 0;
+        padding: 0rem 0.5rem;
+    }
+    .menu-bar-close {
         display: none;
     }
 }
