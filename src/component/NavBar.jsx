@@ -14,6 +14,8 @@ const NavBar = () => {
         menuBarClose.style.display = 'block';
         const menuBarOpen = document.querySelector('.menu-bar-open');
         menuBarOpen.style.display = 'none';
+        const menuBarBoard = document.querySelector('.menu-bar-board');
+        menuBarBoard.style.display = 'block';
 
     }
     const menuBarClose = () => {
@@ -21,6 +23,16 @@ const NavBar = () => {
         menuBarClose.style.display = 'none';
         const menuBarOpen = document.querySelector('.menu-bar-open');
         menuBarOpen.style.display = 'block';
+        const menuBarBoard = document.querySelector('.menu-bar-board');
+        menuBarBoard.style.display = 'none';
+    }
+    function menuBarBoard() {
+        const menuBarClose = document.querySelector('.menu-bar-close');
+        menuBarClose.style.display = 'none';
+        const menuBarOpen = document.querySelector('.menu-bar-open');
+        menuBarOpen.style.display = 'block';
+        const menuBarBoard = document.querySelector('.menu-bar-board');
+        menuBarBoard.style.display = 'none';
     }
     return (
         <>
@@ -67,7 +79,18 @@ const NavBar = () => {
 
                 </div>
             </nav>
-
+            <div onClick={menuBarBoard} className='menu-bar-board bg-white p-4'>
+                <hr />
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Sustainability</li>
+                    <li>Investors</li>
+                    <li>News</li>
+                    <li>People & Culture</li>
+                    <li>Legal</li>
+                </ul>
+            </div>
         </>
     )
 }
