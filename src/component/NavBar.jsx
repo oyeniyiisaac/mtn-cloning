@@ -39,7 +39,7 @@ const NavBar = () => {
             <nav className="navbar">
                 <div className='navbar-list'>
                     <ul>
-                        <img src="src/assets/mobile/mtn-logo.png" height="60" width="80" alt="" />
+                        <img src="https://www.mtn.com/wp-content/themes/mtn-refresh/public/img/mtn-logo.svg" height="60" width="80" alt="" />
                         <li>About Us</li>
                         <li>Sustainability</li>
                         <li>Investors</li>
