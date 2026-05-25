@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import './NavBar.css'
 const NavBar = () => {
     const searchBtn = () => {
         // alert("Search button clicked!");
         const searchContainer = document.querySelector('.search-container');
         searchContainer.style.display = 'flex';
+        document.querySelector('.navbar-list li::after').style.display = 'block';
     }
     const searchCloseBtn = () => {
         const searchContainer = document.querySelector('.search-container');
@@ -42,18 +44,28 @@ const NavBar = () => {
         const aboutBoard = document.querySelector('.about-board-container');
         aboutBoard.style.display = 'none';
     }
+
+    const [show, setshow] = useState(false)
+    const listCard = () => {
+        const growthList = document.querySelector('.growth-list-card');
+        growthList.style.display = 'block';
+    }
+    const growthList = () => {        const growthList = document.querySelector('.growth-list-card');
+        growthList.style.display = 'none';
+    }
+
     return (
         <>
             <nav className="navbar">
                 <div className='navbar-list'>
                     <ul>
                         <img src="https://www.mtn.com/wp-content/themes/mtn-refresh/public/img/mtn-logo.svg" height="60" width="80" alt="" />
-                        <li className='about-list' onMouseOver={aboutUs} >About Us</li>
-                        <li>Sustainability</li>
-                        <li>Investors</li>
-                        <li>News</li>
-                        <li>People & Culture</li>
-                        <li>Legal</li>
+                        <li className='about-list' tabIndex={0} onMouseOver={aboutUs}>About Us</li>
+                        <li tabIndex={0}>Sustainability</li>
+                        <li tabIndex={0}>Investors</li>
+                        <li tabIndex={0}>News</li>
+                        <li tabIndex={0}>People & Culture</li>
+                        <li tabIndex={0}>Legal</li>
                     </ul>
                 </div>
                 <div className='navbar-search'>
@@ -106,7 +118,7 @@ const NavBar = () => {
                     <div className='about-board-list'>
                         <ul>
                             <li>About</li>
-                            <li>Growth Platform <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <li onMouseMove={listCard}>Growth Platform <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                 <path d="M0 0h24v24H0z" fill="none" />
                                 <path fill="currentColor" fill-rule="evenodd" d="M9.97 7.47a.75.75 0 0 1 1.06 0l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06L13.44 12L9.97 8.53a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
                             </svg></li>
@@ -125,6 +137,17 @@ const NavBar = () => {
                         <img src="https://www.mtn.com/wp-content/uploads/2024/07/megamenu.png" alt="" />
                         Learn More about MTN
                     </div>
+                </div>
+                <div className='growth-list-card'>
+                        <svg onClick={growthList} className='growth-list-close' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z" />
+                        </svg>
+                    <ul >
+                        <li>Fintech Solutions</li>
+                        <li>Enterprise Services</li>
+                        <li>Network as a Service</li>
+                    </ul>
                 </div>
             </div>
         </>
