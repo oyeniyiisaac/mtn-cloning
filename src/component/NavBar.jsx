@@ -34,13 +34,21 @@ const NavBar = () => {
         const menuBarBoard = document.querySelector('.menu-bar-board');
         menuBarBoard.style.display = 'none';
     }
+    const aboutUs = () => {
+        const aboutBoard = document.querySelector('.about-board-container');
+        aboutBoard.style.display = 'block';
+    }
+    const aboutBarClose = () => {
+        const aboutBoard = document.querySelector('.about-board-container');
+        aboutBoard.style.display = 'none';
+    }
     return (
         <>
             <nav className="navbar">
                 <div className='navbar-list'>
                     <ul>
                         <img src="https://www.mtn.com/wp-content/themes/mtn-refresh/public/img/mtn-logo.svg" height="60" width="80" alt="" />
-                        <li>About Us</li>
+                        <li className='about-list' onMouseOver={aboutUs} >About Us</li>
                         <li>Sustainability</li>
                         <li>Investors</li>
                         <li>News</li>
@@ -90,6 +98,34 @@ const NavBar = () => {
                     <li>People & Culture</li>
                     <li>Legal</li>
                 </ul>
+            </div>
+
+            {/* About us Board */}
+            <div className='about-board-container' >
+                <div className='about-board-content'>
+                    <div className='about-board-list'>
+                        <ul>
+                            <li>About</li>
+                            <li>Growth Platform <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor" fill-rule="evenodd" d="M9.97 7.47a.75.75 0 0 1 1.06 0l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06L13.44 12L9.97 8.53a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
+                            </svg></li>
+                            <li>Board of directors</li>
+                            <li>Executive Committee</li>
+                            <li>Our Journey</li>
+                            <li>Supply Chain</li>
+                        </ul>
+                    </div>
+                    <div className='about-right-content'>
+                        <svg onClick={aboutBarClose} className='about-bar-close' xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z" />
+                        </svg>
+
+                        <img src="https://www.mtn.com/wp-content/uploads/2024/07/megamenu.png" alt="" />
+                        Learn More about MTN
+                    </div>
+                </div>
             </div>
         </>
     )
