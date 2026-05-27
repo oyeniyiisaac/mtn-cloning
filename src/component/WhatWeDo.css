@@ -32,8 +32,8 @@
 }
 .card p {
     margin-top: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 200;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .card:hover {
@@ -43,4 +43,75 @@
 
 .card:active {
     background-color: #ffcb05;
+}
+
+.growth-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.growth-card1 {
+    background-image: url('https://www.mtn.com/wp-content/uploads/2024/07/Group-47980.png');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    padding: 1rem;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.growth-card2 {
+    background-image: url('https://www.mtn.com/wp-content/uploads/2024/07/Business-1.png');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    padding: 1rem;
+    border-radius: 30px;
+    color: #000;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.growth-card3 {
+    background-image: url('https://www.mtn.com/wp-content/uploads/2024/07/Group-47982.png');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    padding: 1rem;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.growth-card-container p {
+    margin-top: 1.5rem;
+}
+
+.growth-arrow {
+    position: absolute;
+    bottom: 5rem;
+}
+
+.growth-platforms, .growth-card-container{
+    margin: 1rem 10rem 1rem 10rem;
+    align-items: center;
+    place-items: center;
+}
+.growth-platforms-container h1 {
+    padding: 2rem;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.growth-card1:hover, .growth-card2:hover, .growth-card3:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
