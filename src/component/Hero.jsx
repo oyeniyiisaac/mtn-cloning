@@ -104,6 +104,14 @@ export default function Hero() {
         }, 4500);
         return () => clearInterval(timerRef.current);
     }, [total]);
+    useEffect(() => {
+        const frameId = window.requestAnimationFrame(() => {
+            AOS.refreshHard();
+        });
+
+        return () => window.cancelAnimationFrame(frameId);
+    }, [current, isMobile]);
+
 
     // Responsive breakpoint detection
     useEffect(() => {
@@ -183,8 +191,17 @@ export default function Hero() {
                                 </p>
 
                                 <div style={styles.glassBody}>
-                                    <h2 style={{ ...styles.title, fontSize: isMobile ? 28 : styles.title.fontSize }}>{slide.title}</h2>
-                                    <p style={{ ...styles.sub, fontSize: isMobile ? 13 : styles.sub.fontSize }}>{slide.sub}</p>
+                                    {isActive && (
+                                        <h2
+                                            key={current}
+                                            data-aos="fade-up"
+                                            data-aos-duration="2000"
+                                            style={{ ...styles.title, fontSize: isMobile ? 28 : styles.title.fontSize }}
+                                        >
+                                            {slide.title}
+                                        </h2>
+                                    )}
+                                    <p data-aos='fade-up' style={{ ...styles.sub, fontSize: isMobile ? 13 : styles.sub.fontSize }}>{slide.sub}</p>
                                     <button style={{ ...styles.btn, padding: isMobile ? '8px 18px' : styles.btn.padding, fontSize: isMobile ? 12 : styles.btn.fontSize }}>{slide.btn}</button>
                                 </div>
 
@@ -215,7 +232,7 @@ const styles = {
     root: {
         position: "relative",
         width: "100%",
-        height: 570,
+        height: 600,
         overflow: "hidden",
         fontFamily: "Georgia, serif",
     },
@@ -230,7 +247,7 @@ const styles = {
         left: 0,
         width: "100%",
         height: "100%",
-        transition: "opacity 0.8s ease-in-out",
+        transition: "opacity 1.8s ease-in-out",
     },
     scatterOverlay: {
         position: "absolute",
@@ -269,14 +286,14 @@ const styles = {
         minWidth: 240,
         height: "100%",
         zIndex: 10,
-        background: "rgba(0,0,0,0.08)",
+        background: "rgba(0,0,0,0.28)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(16px)",
         borderRight: "1px solid rgba(255,255,255,0.10)",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        padding: "30px 24px 22px",
+        padding: "30px 24px 52px 40px",
     },
     eyebrow: {
         fontSize: 10,
@@ -294,17 +311,17 @@ const styles = {
         justifyContent: "center",
     },
     title: {
-        fontSize: 54,
-        fontWeight: 700,
-        fontStyle: "san-serif",
+        fontSize: 48,
+        fontWeight: 900,
+        // fontStyle: "s",
         color: "#fff",
         lineHeight: 1.24,
         marginBottom: 9,
-        textShadow: "0 2px 10px rgba(0,0,0,0.5)",
+        // textShadow: "0 2px 10px rgba(0,0,0,0.5)",
         margin: "0 0 9px 0",
     },
     sub: {
-        fontSize: 12.5,
+        fontSize: 16.5,
         color: "rgba(255,255,255,0.65)",
         lineHeight: 1.58,
         fontFamily: "sans-serif",
@@ -314,6 +331,7 @@ const styles = {
     btn: {
         display: "inline-block",
         marginTop: 16,
+        marginBottom: 10,
         background: "#ffcb05",
         color: "#111",
         fontSize: 14,
@@ -321,11 +339,12 @@ const styles = {
         letterSpacing: "0.12em",
         textTransform: "uppercase",
         fontFamily: "sans-serif",
-        padding: "9px 40px",
+        padding: "9px 50px",
         borderRadius: 22,
         border: "none",
         cursor: "pointer",
         width: "fit-content",
+        alignItems: "center",
     },
     dotsRow: {
         display: "flex",
@@ -333,8 +352,8 @@ const styles = {
         gap: 20,
     },
     dot: {
-        width: 8,
-        height: 8,
+        width: 10,
+        height: 10,
         borderRadius: "50%",
         background: "#909090",
         border: "none",
@@ -344,8 +363,8 @@ const styles = {
         padding: 0,
     },
     dotActive: {
-        width: 14,
-        height: 14,
+        width: 16,
+        height: 16,
         borderRadius: 10,
         background: "#ffcb05",
         borderColor: "#fff",
