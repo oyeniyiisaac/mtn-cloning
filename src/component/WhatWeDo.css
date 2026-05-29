@@ -8,9 +8,11 @@
     z-index: 20;
     /* text-align: center; */
 }
+
 .card-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
     margin-top: 2rem;
     align-items: center;
     text-align: center;
@@ -25,11 +27,13 @@
     margin: 0 1rem;
     border: none;
 }
+
 .card img {
     width: 80px;
     height: 130px;
     border-radius: 8px;
 }
+
 .card p {
     margin-top: 0.5rem;
     font-size: 1.2rem;
@@ -91,6 +95,7 @@
     font-size: 1.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .growth-card-container p {
     margin-top: 1.5rem;
 }
@@ -100,18 +105,22 @@
     bottom: 5rem;
 }
 
-.growth-platforms, .growth-card-container{
+.growth-platforms,
+.growth-card-container {
     margin: 1rem 10rem 1rem 10rem;
     align-items: center;
     place-items: center;
 }
+
 .growth-platforms-container h1 {
     padding: 2rem;
     font-size: 6rem;
     font-weight: 700;
 }
 
-.growth-card1:hover, .growth-card2:hover, .growth-card3:hover {
+.growth-card1:hover,
+.growth-card2:hover,
+.growth-card3:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
@@ -123,24 +132,67 @@
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         top: -1rem;
-        padding: 1rem 5rem;
+        padding: 1rem 0 0;
         z-index: 20;
         /* text-align: center; */
     }
+
     .card-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         gap: 1rem;
     }
+
+    .growth-platforms {
+        margin: 1rem 0 1rem 0;
+        width: 100%;
+        padding: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 0;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .growth-platforms::-webkit-scrollbar {
+        display: none;
+    }
+
     .growth-card-container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
+        display: flex;
+        grid-template-columns: none;
+        gap: 0;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 1rem;
     }
-    .growth-platforms, .growth-card-container{
-        margin: 1rem 2rem 1rem 2rem;
+
+    .growth-card1,
+    .growth-card2,
+    .growth-card3 {
+        flex: 0 0 100%;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        height: 70vh;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        box-sizing: border-box;
+        margin: 1rem;
     }
+
     .growth-platforms-container h1 {
         font-size: 3rem;
         font-weight: 700;
+        padding: 1rem 1rem 0;
+    }
+
+    .growth-card-container p {
+        font-size: 1rem;
+        max-width: 85%;
+    }
+
+    .growth-arrow {
+        bottom: 1.9rem;
     }
 }

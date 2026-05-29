@@ -1,0 +1,43 @@
+.achieve {
+    background-image: url('https://www.mtn.com/wp-content/uploads/2024/07/achievement.png');
+    background-size: cover;
+    background-position: center;
+    padding: 18rem 3rem 4rem 2rem;
+}
+.achieve h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 4rem;
+}
+.achieve span {
+    color: #fac705
+}
+
+.achieve-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin:2rem 4rem 0 4rem;
+}
+.achieve-card {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.159);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    color: #fff;
+}
+.achieve img {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.achieve-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.achieve-card p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 0.5rem;
+}

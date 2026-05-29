@@ -38,13 +38,67 @@
 
 .chart-board-container button {
     padding: 0.5rem 2rem;
-    margin: 4rem;
+    margin: 2rem auto 0;
     background-color: #fff;
-    border: 1px solid #000;
+    border: 2px solid #000;
     border-radius: 20px;
+    display: block;
+    width: fit-content;
 }
 
 .chart-board-container button:hover {
     background-color: #020202;
     color: #fff;
+    border: 2px solid #fff;
+}
+
+@media screen and (max-width: 765px) {
+    .chart-board-container {
+        background-color: #f7d015;
+        justify-content: space-between;
+        padding: 20px;
+        /* margin: 0.5rem; */
+        border-radius: 20px;
+    }
+
+    .container-head {
+        font-size: 4rem;
+        font-weight: 600;
+        color: #020202;
+        padding: 1rem;
+    }
+
+    .chart-board-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 1rem;
+        gap: 1rem;
+    }
+
+    .chart-container {
+        background-color: #fff;
+        width: 100%;
+        height: 500px;
+        border-radius: 20px;
+        margin: 0 auto !important;
+    }
+
+    .board-container {
+        background: linear-gradient(to top, #020202, #202020, #404040);
+        width: 100%;
+        height: 500px;
+        border-radius: 20px;
+        color: #fff;
+        padding: 2rem;
+    }
+
+    .chart-board-container button {
+        padding: 0.5rem 1rem;
+        margin: 1rem auto 0;
+        background-color: #fff;
+        border: 2px solid #000;
+        border-radius: 20px;
+        display: block;
+        width: fit-content;
+    }
 }

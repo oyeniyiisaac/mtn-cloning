@@ -46,7 +46,7 @@ export default function ChartBoard() {
     );
 
     return (
-        <div style={{ padding: "24px 16px", fontFamily: "sans-serif", maxWidth: 700, margin: "0 auto" }}>
+        <div style={{ padding: "16px 12px", fontFamily: "sans-serif", width: "100%", maxWidth: "none", margin: 0, boxSizing: "border-box" }}>
             <p style={{ textAlign: "center", fontSize: 16, marginBottom: 20, color: "#333" }}>
                 Share <strong>performance</strong>
             </p>

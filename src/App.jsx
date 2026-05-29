@@ -1,3 +1,4 @@
+import Achieve from './component/Achieve';
 import ChartAndBoard from './component/ChartAndBoard';
 import ChartBoard from './component/ChartBoard';
 import Hero from './component/Hero';
@@ -13,7 +14,7 @@ const App = () => {
       <Hero />
       <WhatWeDo />
       <ChartAndBoard />
-      {/* <ChartBoard /> */}
+      <Achieve />
     </>
   )
 }

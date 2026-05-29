@@ -7,7 +7,7 @@ const ChartAndBoard = () => {
             <div className='chart-board-container'>
                 <h1 className='container-head'>Investors</h1>
                 <div className='chart-board-content'>
-                    <div className='chart-container'>
+                    <div className='chart-container' data-aos="fade-down" data-aos-duration="1000">
                         <ChartBoard />
                         <div>
                             <div style={{ backgroundColor: '#373737', padding: '0 1rem', margin: '0 1.5rem 0 3.2rem', color: '#fff'}}>
@@ -20,12 +20,13 @@ const ChartAndBoard = () => {
                             <button>VIEW ALL INVESTORS</button>
                         </div>
                     </div>
-                    <div className='board-container'>
+                    <div className='board-container' data-aos="fade-down" data-aos-duration="1000">
                         <h4>Investors</h4>
                         <h1>Upcoming events</h1>
                     </div>
                 </div>
             </div>
+            
         </>
     )
 }

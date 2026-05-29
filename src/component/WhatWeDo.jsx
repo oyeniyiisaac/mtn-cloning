@@ -36,6 +36,7 @@ const WhatWeDo = () => {
                                 <p>We want to be African's leading digital platform</p>
                                 <img src="https://www.mtn.com/wp-content/themes/mtn-refresh/public/img/svgs/Union.svg" className='growth-arrow' alt="" />
                             </div>
+                            
                             <div className='growth-card2'>
                                 <img src="https://www.mtn.com/wp-content/uploads/2024/07/Logo-4.svg" alt="" />
                                 <p>Businesses operating in the modern context should always strive to improve productivity.</p>
