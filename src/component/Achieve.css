@@ -41,3 +41,17 @@
     color: #fff;
     margin-top: 0.5rem;
 }
+
+@media screen and (max-width: 765px) {
+    .achieve {
+        margin-top: 2rem;
+        padding: 10rem 1rem 2rem 1rem;
+    }
+    .achieve h1 {
+        font-size: 3rem;
+    }
+    .achieve-container {
+        grid-template-columns: 1fr;
+        margin: 2rem 1rem 0 1rem;
+    }
+}
