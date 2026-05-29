@@ -1,0 +1,50 @@
+.chart-board-container {
+    background-color: #f7d015;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 2rem;
+    border-radius: 20px;
+}
+
+.container-head {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #020202;
+    padding: 1rem 4rem;
+}
+
+.chart-board-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    gap: 2rem;
+}
+
+.chart-container {
+    background-color: #fff;
+    width: 50%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.board-container {
+    background: linear-gradient(to top, #020202, #202020, #404040);
+    width: 50%;
+    height: 500px;
+    border-radius: 20px;
+    color: #fff;
+    padding: 2rem;
+}
+
+.chart-board-container button {
+    padding: 0.5rem 2rem;
+    margin: 4rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+.chart-board-container button:hover {
+    background-color: #020202;
+    color: #fff;
+}

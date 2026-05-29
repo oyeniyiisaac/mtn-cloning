@@ -179,7 +179,7 @@ export default function Hero() {
                                 ...styles.glass,
                                 width: isMobile ? '100%' : styles.glass.width,
                                 minWidth: isMobile ? 'auto' : styles.glass.minWidth,
-                                padding: isMobile ? '18px 16px' : styles.glass.padding,
+                                padding: isMobile ? '48px 16px' : styles.glass.padding,
                                 height: isMobile ? 'auto' : styles.glass.height,
                                 top: isMobile ? 'auto' : styles.glass.top,
                                 bottom: isMobile ? 0 : 'auto',
@@ -361,6 +361,7 @@ const styles = {
         transition: "all 0.3s ease",
         flexShrink: 0,
         padding: 0,
+        margin: 0,
     },
     dotActive: {
         width: 16,
